@@ -109,8 +109,9 @@ ul {
     border: 20px;
     padding-left: 5%;
     padding-right: 5%;
-    grid-template-columns: minmax(570px, 30%) 70%;
+    grid-template-columns: 570px auto;
     grid-template-rows: 33% 33% 33%;
+    column-gap: 20px;
 }
 
 .myWork {
@@ -122,8 +123,9 @@ ul {
     padding-left: 5%;
 }
 
-#myWork {
-    padding-left: 150px;
+
+#myUxSkills {
+    margin: auto;
 }
 
 .workImages {
