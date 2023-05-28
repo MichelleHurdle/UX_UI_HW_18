@@ -12,13 +12,46 @@ body {
 
 p {
     color:rgb(19, 20, 20);
+}
 
+h1 {
+    font-family: 'Ibarra Real Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 79px;
+    color: #404040;
+    padding-left: 5%;
+}
+
+h2 {
+    font-family: 'Ibarra Real Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    color: #404040;
+}
+
+h3 {
+    font-family: Lexend;
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    color: #404040;
+}
+
+#viewAllProjects {
+    padding-left: 150px;
 }
 
 button {
-    font-family: 'Raleway', sans-serif;
-    font-size: 22px;
-    font-weight: semi-bold;
+    font-family: Lexend;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    text-align: left;    
     background-color: #3645a5;
     color:aliceblue;
     border-radius: 50px;
@@ -65,11 +98,55 @@ ul {
 .content {
     max-width: 600px;
     float: left;
-    padding-top: 200px;
-    padding-left: 200px;
+    padding-top: 5%;
+    padding-left: 5%;
     padding-inline-end: 10%;
 
 }
+
+.workGrid {
+    display: grid;
+    border: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    grid-template-columns: minmax(570px, 30%) 70%;
+    grid-template-rows: 33% 33% 33%;
+}
+
+.myWork {
+    display: grid;
+    padding: auto;
+}
+
+.myWork h1 {
+    padding-left: 5%;
+}
+
+#myWork {
+    padding-left: 150px;
+}
+
+.workImages {
+    justify-content:space-around;
+    padding: 20px;
+}
+
+#nasaImage {
+    border-radius: 20px;
+}
+
+.flexContainer {
+    display: flex;
+    padding: 40px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.flexContainer div {
+    width: 33%;
+    padding: 20px;
+}
+
 
 footer {
     background-image: linear-gradient(to right, #8E3179, #1E2761);
