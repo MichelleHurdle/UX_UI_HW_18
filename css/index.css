@@ -40,9 +40,6 @@ h3 {
     color: #404040;
 }
 
-#viewAllProjects {
-    padding-left: 150px;
-}
 
 button {
     font-family: Lexend;
@@ -84,11 +81,12 @@ nav {
 }
 
 ul {
-    width: 40%;
+    width: 30%;
+    min-width: 450px;
     margin-left: auto;
 }
 
-.heroImg {
+/*.heroImg {
     height: 400px;
     padding: 80px;
     float: right;
@@ -102,43 +100,26 @@ ul {
     padding-inline-end: 10%;
 
 }
+*/
 
-.workGrid {
-    display: grid;
-    border: 20px;
+.heroSection {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 5%;
+    padding: 100px;
+    padding-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
     padding-left: 5%;
-    padding-right: 5%;
-    column-gap: 20px;
-    grid-template-columns: 570px auto;
-    grid-template-rows: 33% 33% 33%;
-    grid-template-areas: 
-    'wolfImg wolfBlurb'
-    'nasaImg nasaBlurb'
-    'ocImg ocBlurb'
-    ;
+    padding-right: 40px;
+    max-width: 725px;
 }
 
-.myWork {
-    display: grid;
-    padding: auto;
-}
-
-.myWork h1 {
-    padding-left: 5%;
-}
-
-
-#myUxSkills {
-    margin: 100px;
-}
-
-.workImages {
-    justify-content:space-around;
-    padding: 20px;
-}
-
-#nasaImg img {
-    border-radius: 20px;
+.profilePicture {
+    margin: 20px;
 }
 
 .flexContainer {
@@ -153,6 +134,53 @@ ul {
     padding: 20px;
 }
 
+#myUxSkills {
+    margin: 5%;
+}
+
+.workGrid {
+    display: grid;
+    border: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    column-gap: 5%;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'wolfImg wolfBlurb'
+    'nasaImg nasaBlurb'
+    'ocImg ocBlurb'
+    ;
+}
+
+.workGrid p {
+    max-width: 70%;
+}
+
+
+.myWork {
+    display: grid;
+    padding: auto;
+}
+
+.myWork h1 {
+    padding-left: 5%;
+}
+
+#viewAllProjects {
+    padding-left: 150px;
+}
+
+
+.workImages {
+    padding: 20px;
+    justify-content:space-around;
+}
+
+#nasaImg img {
+    border-radius: 20px;
+}
+
 
 footer {
     background-image: linear-gradient(to right, #8E3179, #1E2761);
@@ -163,7 +191,7 @@ footer {
 }
 
 footer ul {
-    display: inline-block;
+    display: flex;
     vertical-align: top;
 }
 
@@ -177,6 +205,7 @@ li {
 
 #wolfBlurb {
     grid-area: wolfBlurb;
+    padding-bottom: 40px;
 }
 
 #nasaImg {
@@ -185,6 +214,7 @@ li {
 
 #nasaBlurb {
     grid-area: nasaBlurb;
+    padding-bottom: 40px;
 }
 
 #ocImg {
@@ -193,15 +223,32 @@ li {
 
 #ocBlurb {
     grid-area: ocBlurb;
+    padding-bottom: 40px;
 }
 
 
-
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .flexContainer {
         flex-direction: column;
     }
+
+    .flexContainer div {
+        width: auto;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+    .inline-block {
+        width: 400
+    }
+    footer ul {
+        flex-direction: column;
+    }
+}
+
+  
+@media only screen and (max-width: 1050px) {
     .workGrid {
         grid-template-columns: auto;
         grid-template-areas: 
@@ -213,8 +260,19 @@ li {
         'ocBlurb'
         ;
     }
+
+    .workGrid p {
+        max-width: 100%;
+    }
+
     .workImages {
         padding: 0%;
     }
-  }
-  
+
+    .heroSection {
+        padding: 5%;
+    }
+    h1 {
+        font-size: 40px;
+    }
+}
